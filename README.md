@@ -22,13 +22,29 @@ A React SPA built with Vite that allows users to search for and display GIFs wit
    npm install
    ```
 
-3. **Start the development server**
+3. **Set up environment variables**
+
+   Create a `.env` file in the root directory and add your Giphy API key:
+
+   ```bash
+   # Create .env file
+   touch .env
+   ```
+
+   Add the following to your `.env` file:
+
+   ```env
+   VITE_GIPHY_API_KEY=your_giphy_api_key_here
+   ```
+
+4. **Start the development server**
 
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
+
    Navigate to `http://localhost:5173` to view the application.
 
 ## Available Scripts
