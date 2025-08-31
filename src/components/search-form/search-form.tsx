@@ -8,17 +8,15 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 
-interface SearchFormProps {
-  searchInput: string;
-  onSearchInputChange: (value: string) => void;
-  onSearch: () => void;
-}
-
 export function SearchForm({
   searchInput,
   onSearchInputChange,
   onSearch,
-}: SearchFormProps) {
+}: {
+  searchInput: string;
+  onSearchInputChange: (value: string) => void;
+  onSearch: () => void;
+}) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,7 +33,7 @@ export function SearchForm({
   return (
     <form onSubmit={handleSubmit} style={{ width: "100%" }}>
       <Field.Root w="100%">
-        <Group attached w="full" maxW="1000px">
+        <Group attached w="100%" maxW="1000px">
           {/* Button for clearing input */}
           <InputGroup
             endElement={

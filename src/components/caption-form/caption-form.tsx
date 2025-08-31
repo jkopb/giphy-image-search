@@ -11,19 +11,17 @@ import {
 import { CaptionPlacementSelect } from "../caption-placement-select";
 import { CaptionPlacement } from "@/components/caption-placement-select/caption-placement-select.types";
 
-interface CaptionFormProps {
-  captionText: string;
-  onCaptionTextChange: (value: string) => void;
-  captionPlacement: CaptionPlacement;
-  onCaptionPlacementChange: (placement: CaptionPlacement) => void;
-}
-
 export function CaptionForm({
   captionText,
   onCaptionTextChange,
   captionPlacement,
   onCaptionPlacementChange,
-}: CaptionFormProps) {
+}: {
+  captionText: string;
+  onCaptionTextChange: (value: string) => void;
+  captionPlacement: CaptionPlacement;
+  onCaptionPlacementChange: (placement: CaptionPlacement) => void;
+}) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (

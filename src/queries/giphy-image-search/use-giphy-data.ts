@@ -13,7 +13,7 @@ interface GiphyDataWithPagination {
   hasNextPage: boolean;
 }
 
-const fetchGiphyData = async (query: string, limit: number, offset: number = 0): Promise<GiphyDataWithPagination> => {
+export const fetchGiphyData = async (query: string, limit: number, offset: number = 0): Promise<GiphyDataWithPagination> => {
   const url = new URL("https://api.giphy.com/v1/stickers/search");
   url.searchParams.append("q", query);
   url.searchParams.append("limit", limit.toString());

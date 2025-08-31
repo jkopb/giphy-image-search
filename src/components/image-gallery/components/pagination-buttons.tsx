@@ -1,14 +1,5 @@
 import { Button, HStack, Text } from "@chakra-ui/react";
 
-interface PaginationButtonsProps {
-  currentPage: number;
-  hasNextPage: boolean;
-  onPreviousPage: () => void;
-  onNextPage: () => void;
-  visibleItemsCount: number;
-  totalItemsCount: number;
-}
-
 export function PaginationButtons({
   currentPage,
   hasNextPage,
@@ -16,7 +7,14 @@ export function PaginationButtons({
   onNextPage,
   visibleItemsCount,
   totalItemsCount,
-}: PaginationButtonsProps) {
+}: {
+  currentPage: number;
+  hasNextPage: boolean;
+  onPreviousPage: () => void;
+  onNextPage: () => void;
+  visibleItemsCount: number;
+  totalItemsCount: number;
+}) {
   return (
     <HStack gap={4} justify="center" mt={6}>
       <Button
