@@ -53,6 +53,8 @@ A React SPA built with Vite that allows users to search for and display GIFs wit
 - `npm run build` - Build the project for production
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint to check code quality
+- `npm run test` - Run tests in watch mode
+- `npm run test:run` - Run tests once and exit
 
 ## Tech Stack
 
